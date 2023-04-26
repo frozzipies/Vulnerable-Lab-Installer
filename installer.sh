@@ -31,34 +31,34 @@ case $option in
         echo "Installing DVWA..."
         docker run --name dvwa -d -p 81:80 vulnerables/web-dvwa:latest
         echo "DVWA Installation Complete"
-        echo "Access DVWA at http://localhost:81 \n \n"
+        echo "Access DVWA at http://localhost:81"
         ;;
     2)
         echo "Installing bWAPP..."
         docker run --name bwapp -d -p 82:80 raesene/bwapp:latest
         echo "bWAPP Installation Complete"
-        echo "Access bWAPP at http://localhost:82 \n \n"
+        echo "Access bWAPP at http://localhost:8"
         ;;
     3)
         echo "Installing Yavuzlar..."
         docker run --name vulnlab -d -p 83:80 yavuzlar/vulnlab:latest
         echo "Yavuzlar Installation Complete"
-        echo "Access Yavuzlar at http://localhost:83 \n \n"
+        echo "Access Yavuzlar at http://localhost:83"
         ;;
     4)
         echo "Installing all labs..."
         echo "Installing DVWA..."
         docker run --name dvwa -d -p 81:80 vulnerables/web-dvwa:latest
         echo "DVWA Installation Complete"
-        echo "Access DVWA at http://localhost:81 \n \n"
+        echo "Access DVWA at http://localhost:81"
         echo "Installing bWAPP..."
         docker run --name bwapp -d -p 82:80 raesene/bwapp:latest
         echo "bWAPP Installation Complete"
-        echo "Access bWAPP at http://localhost:82 \n \n"
+        echo "Access bWAPP at http://localhost:82"
         echo "Installing Yavuzlar..."
         docker run --name vulnlab -d -p 83:80 yavuzlar/vulnlab:latest
         echo "Yavuzlar Installation Complete"
-        echo "Access Yavuzlar at http://localhost:83 \n \n"
+        echo "Access Yavuzlar at http://localhost:83"
         ;;
     *)
         echo "Invalid option selected."
