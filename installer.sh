@@ -5,12 +5,7 @@ if ! command -v docker &> /dev/null
 then
     echo "Docker not found, installing Docker..."
     # Install Docker
-    curl -fsSL https://get.docker.com -o get-docker.sh
-    sudo sh get-docker.sh
-    # Add user to docker group
-    sudo usermod -aG docker $USER
-    # Restart Docker service
-    sudo systemctl restart docker
+    sudo apt install docker.io
 fi
 
 # Print custom text
@@ -36,34 +31,34 @@ case $option in
         echo "Installing DVWA..."
         docker run --name dvwa -d -p 81:80 vulnerables/web-dvwa:latest
         echo "DVWA Installation Complete"
-        echo "Access DVWA at http://localhost:81"
+        echo "Access DVWA at http://localhost:81 \n \n"
         ;;
     2)
         echo "Installing bWAPP..."
         docker run --name bwapp -d -p 82:80 raesene/bwapp:latest
         echo "bWAPP Installation Complete"
-        echo "Access bWAPP at http://localhost:82"
+        echo "Access bWAPP at http://localhost:82 \n \n"
         ;;
     3)
         echo "Installing Yavuzlar..."
         docker run --name vulnlab -d -p 83:80 yavuzlar/vulnlab:latest
         echo "Yavuzlar Installation Complete"
-        echo "Access Yavuzlar at http://localhost:83"
+        echo "Access Yavuzlar at http://localhost:83 \n \n"
         ;;
     4)
         echo "Installing all labs..."
         echo "Installing DVWA..."
         docker run --name dvwa -d -p 81:80 vulnerables/web-dvwa:latest
         echo "DVWA Installation Complete"
-        echo "Access DVWA at http://localhost:81"
+        echo "Access DVWA at http://localhost:81 \n \n"
         echo "Installing bWAPP..."
         docker run --name bwapp -d -p 82:80 raesene/bwapp:latest
         echo "bWAPP Installation Complete"
-        echo "Access bWAPP at http://localhost:82"
+        echo "Access bWAPP at http://localhost:82 \n \n"
         echo "Installing Yavuzlar..."
         docker run --name vulnlab -d -p 83:80 yavuzlar/vulnlab:latest
         echo "Yavuzlar Installation Complete"
-        echo "Access Yavuzlar at http://localhost:83"
+        echo "Access Yavuzlar at http://localhost:83 \n \n"
         ;;
     *)
         echo "Invalid option selected."
