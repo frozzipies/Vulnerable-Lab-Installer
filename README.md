@@ -1,4 +1,4 @@
-#Vulnerable-Lab-Installer
+# Vulnerable-Lab-Installer
 
 Install Vulnerable Labs (DVWA, bWAPP, Yavuzlar, etc) Easily using this bash script!
 
