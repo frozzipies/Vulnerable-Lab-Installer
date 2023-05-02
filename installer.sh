@@ -9,7 +9,7 @@ fi
 # Check if Docker is installed
 if ! command -v docker &> /dev/null
 then
-    echo "Docker not found, installing Docker...\n"
+    echo "Docker not found, installing Docker..."
     # Install Docker
     sudo apt install docker.io
 fi
