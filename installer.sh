@@ -1,5 +1,11 @@
 #!/bin/bash
 
+# Check if running with root privileges
+if [ "$(id -u)" != "0" ]; then
+    echo "This script must be run as root" >&2
+    exit 1
+fi
+
 # Check if Docker is installed
 if ! command -v docker &> /dev/null
 then
